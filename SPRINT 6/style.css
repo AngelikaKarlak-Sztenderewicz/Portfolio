@@ -1,0 +1,669 @@
+:root {
+  --mainBlue: #1f2041;
+  --mainGrey: #adb6c4;
+  --white: #fff;
+  --orange: #d4af37;
+  --black: #000;
+  --errorColor: #af0808;
+}
+.wrapper {
+  min-width: 320px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background-color: var(--mainBlue);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+/*logo*/
+h1 {
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+/* tytuł */
+h2 {
+  font-size: 96px;
+  font-weight: 400;
+  color: var(--white);
+  margin: 0;
+  font-family: "League Gothic";
+
+  align-self: center;
+}
+/* podtytuł */
+h3 {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--white);
+  margin: 0;
+  font-family: "League Gothic";
+}
+/*nagłówki */
+h4 {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+  color: var(--mainBlue);
+}
+h5 {
+  font-weight: 700;
+  font-size: 27px;
+  margin: 0;
+  color: var(--white);
+}
+p {
+  color: var(--mainBlue);
+  margin-bottom: 40px;
+}
+.leftLogo {
+  color: var(--orange);
+}
+.rightLogo {
+  color: var(--mainGrey);
+}
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+.menuBtn {
+  display: none;
+  background-image: url(pictures/menu.png);
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+}
+nav button {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: transparent;
+  border: none;
+}
+.active {
+  color: var(--mainGrey);
+}
+.navigation {
+  padding: 37px 120px;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+}
+.heroContent {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 84px 0;
+  flex-direction: column;
+  align-items: center;
+}
+main section {
+  flex-wrap: wrap;
+  width: 80%;
+
+  display: flex;
+  align-content: center;
+  justify-self: center;
+  flex-direction: column;
+}
+.homePageMain section {
+  justify-content: center;
+}
+.profilePhoto {
+  width: 100%;
+  height: 311px;
+  border-radius: 16px;
+  background-size: cover;
+  object-position: top;
+  object-fit: cover;
+  margin-bottom: 65px;
+}
+.mainSectionStyle {
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.aboutSectionStyle {
+  margin-bottom: 84px;
+}
+#projectMain {
+  gap: 0 0 84px 0;
+}
+.mainButton,
+#sendMessage {
+  width: 260px;
+  height: 60px;
+  border-radius: 8px;
+  background-color: var(--mainGrey);
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 15px 49px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-self: center;
+  justify-content: center;
+  align-self: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+#addProject {
+  margin-bottom: 84px;
+}
+.buttonDiv {
+  gap: 55px;
+  display: flex;
+  margin-top: 85px;
+  height: 65px;
+  justify-content: center;
+}
+.arrowButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background-color: var(--mainGrey);
+  border: none;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.vector2 {
+  width: 16.5px;
+  height: 16.5px;
+}
+#titleError,
+#secondTitleError,
+#technologiesError,
+.nameError,
+.secondNameError,
+.emailError,
+.messageError,
+.secondMessageError {
+  color: var(--errorColor);
+  font-size: 12px;
+  display: none;
+  margin-bottom: -20px;
+}
+#contactMain {
+  padding: 65px 120px;
+  gap: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+}
+#contactMain > div {
+  gap: 65px;
+  display: flex;
+  flex-direction: column;
+}
+#contactMain > div > div {
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+}
+#contactMain label {
+  margin-bottom: 27px;
+  display: block;
+}
+#contactInputs {
+  justify-content: space-between;
+  display: flex;
+}
+#contactInputs div {
+  width: 40%;
+}
+.contactInputs {
+  gap: 65px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 65px;
+  width: 100%;
+}
+.contactInputs label {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mainBlue);
+}
+.contactInputs input {
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid;
+}
+footer {
+  background-color: var(--mainBlue);
+}
+footer h1 {
+  font-size: 27px;
+  text-align: center;
+}
+footer ul {
+  flex-direction: column;
+  padding: 60px 0 0 120px;
+  margin: 0;
+  width: 168px;
+}
+.footerContact {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  justify-self: end;
+  margin: 0 120px 60px 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+.footerContact > div {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+#overlay {
+  display: none;
+}
+/* Form container w środku */
+.form-container {
+  width: 800px;
+  height: 324px;
+  background-color: white;
+  padding: 60px 120px;
+  position: relative;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  font-family: "League Spartan";
+}
+.form-container label,
+#contactMain label {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mainBlue);
+}
+.form-container input,
+#contactMain input {
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid;
+}
+.form-container label {
+  padding-bottom: 27px;
+  display: flex;
+}
+#contactButton > a {
+  font-weight: 400;
+  color: var(--black);
+}
+#contactButton {
+  margin-top: 84px;
+}
+.carouselWrapper {
+  overflow: auto;
+  height: auto;
+  max-height: calc(3 * 460px + 2 * 41px);
+  max-width: calc(3 * 360px + 2 * 41px);
+  display: flex;
+  justify-self: center;
+  scroll-snap-type: y mandatory;
+}
+.carousel {
+  display: flex;
+  /* flex-direction: row; */
+  gap: 41px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  max-width: calc(3 * 360px + 2 * 41px);
+  margin: 0 auto;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+#projectSection {
+  gap: 84px 41px;
+  width: 100%;
+  justify-content: center;
+  max-width: 1600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  width: 24px;
+}
+.projectCard {
+  flex: 0 0 auto;
+  flex-shrink: 0;
+  max-width: 360px;
+  min-width: 300px;
+  scroll-snap-align: start;
+  flex: 0 0 calc((100% - 2 * 41px) / 3);
+  min-height: 460px;
+  max-height: 460px;
+  background-image: url(pictures/CarouselFoto.jpg);
+  object-position: bottom;
+  border-radius: 16px;
+  list-style-type: disc;
+  display: block;
+  position: relative;
+  color: var(--white);
+}
+.projectCard ul {
+  list-style-type: disc;
+  display: block;
+  padding: 18px 30px;
+}
+.projectCard li {
+  margin-top: 40px;
+  margin-left: 18px;
+}
+.deleteBtn {
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+.bin {
+  width: 22px;
+  height: auto;
+}
+#skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 20px;
+  margin-top: 30px;
+  margin-bottom: 85px;
+}
+/* skille: nazwa, lata, kropki  */
+.infoContainer {
+  width: 108px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.skill {
+  width: 182px;
+  height: 70px;
+  display: flex;
+  flex-basis: calc(25% - 15px);
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.skillIcon {
+  width: 64px;
+  height: 64px;
+}
+.emptyDot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--mainBlue);
+  border-radius: 50%;
+}
+.fullDot {
+  width: 12px;
+  height: 12px;
+  border: none;
+  background-color: var(--mainBlue);
+}
+/* kontener na kropki */
+.dots {
+  width: 108px;
+  height: 12px;
+  gap: 12px;
+  display: flex;
+  flex-direction: row;
+}
+#messageDisplay {
+  font-size: 16px;
+  font-weight: 700;
+  gap: 65px;
+  display: flex;
+  flex-direction: column;
+}
+#messageDisplay p {
+  margin: 0;
+}
+#displayProject {
+  justify-self: center;
+  padding: 0 10px;
+  text-align: center;
+}
+.headerWrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.mainWrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.footerWrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+#messageDisplay {
+  gap: 84px;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#contactMain label {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mainBlue);
+}
+#contactMain input {
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid;
+}
+.popup {
+  width: 560px;
+  height: 324px;
+  background-color: white;
+  padding: 60px 120px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: "League Spartan";
+}
+.popup label {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mainBlue);
+  padding-bottom: 27px;
+  display: flex;
+}
+.popup input {
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid;
+}
+.popup div {
+  margin-bottom: 65px;
+}
+@media (max-width: 320px) {
+  body {
+    flex-shrink: 0;
+    min-width: 320px;
+  }
+}
+@media (max-width: 768px) {
+  .navigation {
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 > .rightLogo {
+    display: none;
+  }
+  .disappear {
+    display: none;
+  }
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    background-color: var(--mainBlue);
+    width: 100%;
+    z-index: 999;
+    padding: 28px 0 28px 37px;
+    border: 1px solid var(--white);
+    width: calc(100% - 39px);
+  }
+  .menu.show ul {
+    display: block;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  .menuBtn {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+  }
+  footer nav {
+    display: none;
+  }
+  .menuBtn.open {
+    background-image: url(pictures/menuGold.png);
+  }
+  .footerContact {
+    margin: 60px 18px;
+    gap: 12px;
+    justify-self: center;
+  }
+  .popup {
+    width: 300px;
+    height: 344px;
+    padding: 40px 10px;
+  }
+  .contactInputs {
+    gap: 40px;
+  }
+  #contactInputs {
+    flex-direction: column;
+    gap: 40px;
+  }
+  #contactInputs div {
+    width: 100%;
+  }
+  #contactMain {
+    padding: 84px 10px;
+  }
+  .form-container {
+    width: 300px;
+    padding: 40px 10px;
+  }
+  .carouselWrapper {
+    overflow: auto;
+    overflow-y: auto;
+    height: auto;
+    max-height: calc(3 * 460px + 2 * 41px);
+    max-width: calc(3 * 360px + 2 * 41px);
+    display: flex;
+    justify-self: center;
+    scroll-snap-type: y mandatory;
+  }
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    justify-items: center;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    max-height: calc(3 * 460px + 2 * 41px);
+    align-items: center;
+  }
+  .carousel .projectCard {
+    width: 100%;
+  }
+  #skillsContainer {
+    justify-content: center;
+  }
+  .projectCard {
+    max-width: 360px;
+    min-width: 300px;
+  }
+  #prevBtn,
+  #nextBtn {
+    transform: rotate(90deg);
+  }
+}
